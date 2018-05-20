@@ -113,7 +113,6 @@ export class AppComponent implements OnInit {
                      stacked: true,
                      ticks: {
                          min: 0 // minimum value
-                    
                      }
             }]
          }
@@ -152,8 +151,10 @@ export class AppComponent implements OnInit {
     this.nameCont = contPersn;
     this.cmpPer = perfrmnc;
     this.cmpSts = status;
+    if(perfrmnc){
    this.items = this.orderForm.get('items') as FormArray;
     this.items.push(this.createItem());
+    }
    //alert(contPersn);
     //this.formData = this.cmpDtls.get('formData') as FormArray;
     
